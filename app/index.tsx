@@ -4,7 +4,7 @@ import {WebView} from 'react-native-webview';
 import * as ImagePicker from 'expo-image-picker';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
-const API=(process.env.EXPO_PUBLIC_API_URL||'http://localhost:3000').replace(/\/$/,'');
+const API=(process.env.EXPO_PUBLIC_API_URL||(Platform.OS==='web'?'':'http://localhost:3000')).replace(/\/$/,'');
 const colors={bg:'#07111f',panel:'#0d1b2b',panel2:'#13263a',line:'#29445e',text:'#eef6ff',muted:'#91a9bf',blue:'#51b5ff',cyan:'#55e0d0',gold:'#f6c66b',red:'#ff7d83'};
 const planes=[
  {id:'a320-s7',name:'Airbus A320 · S7 Airlines',type:'Passenger jet',url:'https://raw.githubusercontent.com/kristimsu-beep/pinnogram/main/games/airbus_a320_s7_airlines.glb'},
