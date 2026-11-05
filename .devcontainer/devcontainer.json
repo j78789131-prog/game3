@@ -1,0 +1,27 @@
+{
+  "name": "Skybound Flight Simulator",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+  "forwardPorts": [
+    3000,
+    8081
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "Skybound API / preview",
+      "onAutoForward": "open-browser"
+    },
+    "8081": {
+      "label": "Expo Metro",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  }
+}
