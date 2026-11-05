@@ -1,5 +1,5 @@
 import React,{useEffect,useState} from 'react';
-import {View,Text,TextInput,Pressable,ScrollView,StyleSheet,useWindowDimensions,ActivityIndicator,Image,Alert,Platform} from 'react-native';
+import {View,Text,TextInput,Pressable,ScrollView,StyleSheet,useWindowDimensions,ActivityIndicator,Image,Alert,Platform,Linking} from 'react-native';
 import {WebView} from 'react-native-webview';
 import * as ImagePicker from 'expo-image-picker';
 import {SafeAreaView} from 'react-native-safe-area-context';
