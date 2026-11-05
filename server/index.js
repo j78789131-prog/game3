@@ -5,6 +5,7 @@ const app=express(),server=http.createServer(app);
 const io=new Server(server,{cors:{origin:process.env.CLIENT_ORIGIN||'*'},maxHttpBufferSize:2e6});
 app.use(cors({origin:process.env.CLIENT_ORIGIN||'*'})); app.use(express.json({limit:'8mb'}));
 app.use(express.static(path.join(__dirname,'..','dist')));
+if(process.env.NODE_ENV==='production'&&(!process.env.JWT_SECRET||process.env.JWT_SECRET.length<32))throw new Error('Set JWT_SECRET to a random value of at least 32 characters in production.');
 const JWT_SECRET=process.env.JWT_SECRET||'development-only-change-me';
 const sign=u=>jwt.sign({id:u._id.toString(),role:u.role},JWT_SECRET,{expiresIn:'14d'});
 async function auth(req,res,next){try{const token=(req.headers.authorization||'').replace(/^Bearer\\s+/i,'');if(!token)return res.status(401).json({error:'Authentication required'});const d=jwt.verify(token,JWT_SECRET);req.user=await User.findById(d.id);if(!req.user)return res.status(401).json({error:'Account not found'});next();}catch{res.status(401).json({error:'Invalid or expired session'});}}
