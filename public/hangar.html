@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Skybound Hangar</title>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#07111f;color:#edf7ff;font-family:system-ui}
+.scene{height:100%;position:relative;background:radial-gradient(ellipse at 50% 42%,#23415a 0,#10263b 38%,#07111f 78%);overflow:hidden}
+.ceiling{position:absolute;inset:0 0 45%;background:repeating-linear-gradient(90deg,transparent 0 12%,#8fb5d015 12.2% 12.5%),linear-gradient(#18354c,#0d1e30);clip-path:polygon(0 0,100% 0,100% 100%,50% 65%,0 100%)}
+.floor{position:absolute;bottom:-25%;left:-15%;width:130%;height:65%;transform:perspective(400px) rotateX(48deg);background:repeating-linear-gradient(90deg,#6ca0c022 0 2px,transparent 2px 90px),repeating-linear-gradient(0deg,#6ca0c022 0 2px,transparent 2px 60px),linear-gradient(#263f52,#0a1725);border-top:2px solid #77c9ed66}
+model-viewer{position:absolute;inset:5% 3% 13%;width:94%;height:82%;--poster-color:transparent;background:transparent}
+.info{position:absolute;left:15px;top:14px;font-size:10px;letter-spacing:2px;color:#83d9ef;text-transform:uppercase}
+.help{position:absolute;right:15px;bottom:14px;font-size:10px;color:#b2c5d4;background:#07111fbb;padding:7px 10px;border-radius:8px}
+</style></head><body><div class="scene"><div class="ceiling"></div><div class="floor"></div><div class="info">SKYBOUND · HANGAR 01</div>
+<model-viewer id="aircraft" src="https://raw.githubusercontent.com/kristimsu-beep/pinnogram/main/games/airbus_a320_s7_airlines.glb" alt="S7 Airlines Airbus A320 3D model" camera-controls auto-rotate rotation-per-second="8deg" shadow-intensity="1" exposure="1.05" camera-orbit="35deg 70deg 4.5m" min-camera-orbit="auto auto 2m" max-camera-orbit="auto auto 12m" interaction-prompt="none"></model-viewer>
+<div class="help">Drag to rotate · scroll/pinch to zoom</div></div></body></html>
