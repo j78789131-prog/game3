@@ -54,5 +54,13 @@ Earlier project notes verify only two aircraft assets: S7 Airbus A320 at https:/
 
 Selected hangar asset: Innerscene Aircraft Hangar, GLB, 8.3 MB, public-domain CC0, 75.0 × 62.2 × 25.0 m. Model page and download: https://www.innerscene.com/tools/library/3d-parts/aircraft-hangar-67cccf91
 
-## Scope
-This is a deployable application foundation, not yet a complete certified flight simulator. Full aircraft physics, a detailed 3D hangar scene, map geocoding/search, native voice recording/playback UI, time controls, and admin-role provisioning require further implementation and device testing. Do not put provider secrets in client-side code.
+## Routes and remaining work
+- `/` — browser application.
+- `/preview` — browser preview route.
+- `/earth.html` — Cesium globe preview.
+- `/hangar.html` — interactive A320 GLB viewer.
+- `/api/health` — Render health check.
+- `/api/geocode` — authenticated place and coordinate search.
+- `/api/weather/current` — authenticated current-weather lookup.
+
+This is a working application foundation, not yet the complete simulator requested. Flight physics and the panorama flight scene, live player rendering/client Socket.IO integration, actual voice recording/playback and per-user voice-room membership, draggable time/map plaques, microphone speech-to-text, embedding the full-size hangar model into the 3D scene, and a native Windows package still need implementation and device testing. The admin shortcut currently exposes a local admin panel UI only; it is not a complete server-authoritative flight-control system. The A320 is the only aircraft model with a confirmed complete URL; the SR-72 reference is truncated and the other eight entries remain placeholders. Do not put provider secrets in client-side code.
