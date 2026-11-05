@@ -14,7 +14,7 @@ Expo / React Native client foundation, browser preview, Node.js + Socket.IO API,
 ## Codespaces
 1. Open this repository in GitHub Codespaces.
 2. Run npm install.
-3. Copy .env.example to .env and set MONGODB_URI, JWT_SECRET, CESIUM_ION_TOKEN and OPENWEATHER_API_KEY.
+3. Copy .env.example to .env and set MONGODB_URI, JWT_SECRET, CESIUM_ION_TOKEN and OPENWEATHER_API_KEY. Optionally set ADMIN_EMAIL before registering the administrator account; the exact matching email receives the admin role.
 4. Run npm run dev.
 5. Build the production web preview with npm run export:web, then npm start (port 3000).
 
