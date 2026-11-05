@@ -48,7 +48,7 @@ Expo supports Android and web directly. A native Windows desktop executable requ
 ## Assets
 Earlier project notes verify only two aircraft assets: S7 Airbus A320 at https://github.com/kristimsu-beep/pinnogram/blob/main/games/airbus_a320_s7_airlines.glb and an SR-72 Darkstar URL that was truncated in the earlier conversation. The earlier project did not contain eight additional verified aircraft-specific models. The remaining eight must be supplied or individually sourced and license-checked; this project will not label fallback geometry as real aircraft.
 
-Suggested hangar model: Kenney Space Kit Hangar Large A, CC0: https://flockbay.com/assets/hangar-large-a/
+Selected hangar asset: Innerscene Aircraft Hangar, GLB, 8.3 MB, public-domain CC0, 75.0 × 62.2 × 25.0 m. Model page and download: https://www.innerscene.com/tools/library/3d-parts/aircraft-hangar-67cccf91
 
 ## Scope
 This is a deployable application foundation, not yet a complete certified flight simulator. Full aircraft physics, a detailed 3D hangar scene, map geocoding/search, native voice recording/playback UI, time controls, and admin-role provisioning require further implementation and device testing. Do not put provider secrets in client-side code.
