@@ -7,7 +7,8 @@ Expo / React Native client foundation, browser preview, Node.js + Socket.IO API,
 - Registration/login API with bcrypt password hashing, JWT sessions and optional avatar data.
 - MongoDB user preferences for aircraft, Earth mode, map style, weather layer and opacity.
 - CesiumJS globe page with World Terrain, lighting/water effects, 3D/2D/Columbus modes.
-- Server-side OpenWeather tile proxy for temperature, precipitation, clouds, pressure and wind.
+- Server-side OpenWeather tile proxy for temperature, precipitation, clouds, pressure and wind, plus current conditions lookup.
+- Authenticated place/coordinate search using OpenStreetMap Nominatim.
 - Socket.IO pilot position/state broadcasting and voice-message relay endpoint.
 - Cloudflare Workers AI chat and image-generation API routes (credentials required).
 
@@ -19,8 +20,11 @@ Expo / React Native client foundation, browser preview, Node.js + Socket.IO API,
 5. Build the production web preview with npm run export:web, then npm start (port 3000).
 
 ## Render Web Service
+- Service type: Web Service (not Blueprint); Runtime: Node.
 - Build command: npm install && npm run export:web
 - Start command: npm start
+- Health check path: /api/health
+- Leave Root Directory blank (repository root).
 - Add environment variables from .env.example in the Render dashboard.
 - Use MongoDB Atlas for MONGODB_URI.
 - Set EXPO_PUBLIC_API_URL to the public Render service URL before making native builds.
@@ -37,7 +41,7 @@ Expo / React Native client foundation, browser preview, Node.js + Socket.IO API,
 Render hosts the API and web preview. EAS Build creates the APK.
 
 ## Windows
-Expo supports Android and web directly. A native Windows desktop executable requires adding/configuring the React Native Windows target and building with Visual Studio on Windows. The browser preview can be installed as a PWA in the meantime.
+Expo supports Android and web directly. A native Windows desktop executable requires adding/configuring the React Native Windows target and building with Visual Studio on Windows. The browser preview is available on Windows through Edge/Chrome; it is not a packaged native Windows executable yet.
 
 ## Credentials
 - Cesium ion: https://ion.cesium.com/tokens
